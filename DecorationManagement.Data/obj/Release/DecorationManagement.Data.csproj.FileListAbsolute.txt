@@ -1,0 +1,6 @@
+D:\projects\DecorationManagement\DecorationManagement.Data\bin\Release\DecorationManagement.Data.dll
+D:\projects\DecorationManagement\DecorationManagement.Data\bin\Release\DecorationManagement.Data.pdb
+D:\projects\DecorationManagement\DecorationManagement.Data\obj\Release\DecorationManagement.Data.csprojResolveAssemblyReference.cache
+D:\projects\DecorationManagement\DecorationManagement.Data\obj\Release\DecorationManagement.Data.csproj.CoreCompileInputs.cache
+D:\projects\DecorationManagement\DecorationManagement.Data\obj\Release\DecorationManagement.Data.dll
+D:\projects\DecorationManagement\DecorationManagement.Data\obj\Release\DecorationManagement.Data.pdb

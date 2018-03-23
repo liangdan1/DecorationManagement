@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>严绿装修</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="head_top navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid"><p>24小时热线 : 400-895-0025</p></div>
+    </div>
+    <div style="transform: translateY(46px);">
+        <div class="navbar navbar-default nav_mian">
+            <nav role="navigation">
+                <div class="container-fluid">
+                    <div class="nav navbar-header">
+                        <a class="navbar-brand logo_image" href="#"><img alt="" src="~/Content/Images/yanlv_logo.jpg" /></a>
+                        <button type="button" class="navbar-toggle">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav font16 navlist">
+                            <li>@Html.ActionLink("网站首页", "Index", "Home")</li>
+                            <li>@Html.ActionLink("新房整装", "Newhouse", "Home")</li>
+                            <li>@Html.ActionLink("旧房改造", "Oldhouse", "Home")</li>
+                            <li>@Html.ActionLink("装修案例", "Cases", "Home")</li>
+                            <li>@Html.ActionLink("关于我们", "About", "Home")</li>                          
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    @RenderBody()
+
+<div class="bottom_con">
+    <div class="container-fluid">
+        <div class="bottom_list">
+            <span>关注我们</span>
+            <ul>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">新房整装</a></li>
+                <li><a href="#">旧房改造</a></li>
+                <li><a href="#">色彩搭配</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="bottom_list">
+            <span>装修服务</span>
+            <ul>
+                <li><a href="#">在线预约</a></li>
+                <li><a href="#">免费家装报价</a></li>
+                <li><a href="#">免费户型规划</a></li>
+                <li><a href="#">领取优惠券</a></li>
+            </ul>
+        </div>
+        <div class="bottom_list bottom_1 noborder">
+            <span>装修服务</span>
+            <ul>
+                <li>家装咨询：XXX-XXX-XXXX</li>
+                <li>投诉建议：XXX-XXXXXXXX</li>
+                <li>媒体合作：XXX-XXXXXXXX</li>
+                <li>公司地址：陕西省咸阳市XXXXXXXXXXX</li>
+                <li>@Html.ActionLink("后台", "Signin", "Login")</li>
+            </ul>
+        </div>
+        <div class="bottom_list noborder">
+            <img alt="" src="~/Content/Images/wx111.jpg"/>
+            <p>关注微信</p>
+        </div>
+    </div>
+</div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/main")
+    @Scripts.Render("~/bundles/bootstrap")
+    
+    @RenderSection("scripts", required: false)
+</body>
+</html>

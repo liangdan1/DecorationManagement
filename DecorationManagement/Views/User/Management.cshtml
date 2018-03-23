@@ -1,0 +1,169 @@
+﻿@model DecorationManagement.Models.UserViewModel
+@{
+    Layout = null;
+}
+<div class="row col-md-10 col-md-offset-1">
+    <div class="divbolder-nav col-md-2">
+        <ul class="nav-ul">
+            <a href="@Url.Action("Index","Dashboard")"><li>Dashboard</li></a>
+            <a href="@Url.Action("Index","Bug")"><li>Bugs</li></a>
+            <a href="@Url.Action("Index","User")"><li class="li-active">Users</li></a>
+        </ul>
+    </div>
+    @using (Html.BeginForm("Query", "User", FormMethod.Post, new { role = "form", id = "myListform" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-10">
+            <div class="page-header">
+                <h2>User</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            @Html.TextBoxFor(m => m.WhereCondition, new { @class = "form-control", placeholder = "输入..." })
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="submit">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group pull-right">
+                            <button class="btn btn-success" type="button" id="btnCreate" data-toggle="modal" data-target="#myCreateModal">创建</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @if (Model.Users != null && Model.Users.Any())
+            {
+                <div class="pull-left width-all">
+                    <table class="table table-responsive table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>名字</th>
+                                <th>登录名</th>
+                                <th>邮件</th>
+                                <th>注册时间</th>
+                                <th>最后登录时间</th>
+                                <th>是否启用</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var usermodel in Model.Users)
+                            {
+                                <tr>
+                                    <td>@usermodel.Name</td>
+                                    <td>@usermodel.LoginName</td>
+                                    <td>@usermodel.Email</td>
+                                    <td>@usermodel.RegisterTime</td>
+                                    <td>@usermodel.LastLoginTime</td>
+                                    <td>@usermodel.Enabled</td>
+                                    <td>
+                                        <a data-value="@usermodel.UserId" data-toggle="modal" data-target="#myCreateModal" class="selectEdit text-success">编辑 </a>
+                                        <a data-value="@usermodel.UserId" data-toggle="modal" data-target="#myDeleleModal" class="selectDelete text-success">删除</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center">
+                    <nav>
+                        <ul class="pagination">
+                            @if (Model.PagingInfo.HasPrev)
+                            {
+                                <li><a href="#" name="submit" onclick="myformListSubmit(@Model.PagingInfo.PageIndex - 1); return false">上一页</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="#">上一页</a></li>
+                            }
+                            @if (Model.PagingInfo.PageCount >= 1)
+                            {
+                                for (int index = 1; index <= Model.PagingInfo.PageCount; index++)
+                                {
+                                    if (index == Model.PagingInfo.PageIndex)
+                                    {
+                                        <li class="active">
+                                            <a href="#" name="submit" onclick="myformListSubmit(@index); return false">@index</a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li><a href="#" name="submit" onclick="myformListSubmit(@index); return false">@index</a></li>
+                                    }
+                                }
+                            }
+                            @if (Model.PagingInfo.HasNext)
+                            {
+                                <li><a href="#" name="submit" onclick="myformListSubmit(@Model.PagingInfo.PageIndex + 1); return false">下一页</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="#">下一页</a></li>
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@Html.Partial("Edit", Model.User);
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function setForm() {
+            $("#Name").val("");
+            $("#LoginName").val("");
+            $("#Email").val("");
+            $("#Password").val("");
+            $("#RegisterTime").val("");
+            $("#LastLoginTime").val("");
+        }
+        $('#btnCreate').on("click", function () {
+            setForm();
+        });
+
+        $('#btnSave').on("click", function () {
+            var validator = $('#myform').validate();
+            if (validator.form()) {
+                $("#myform").submit();
+            }
+        });
+
+        $(".selectEdit").on("click", function () {
+            var usreId = this.getAttribute("data-value");
+            $.getJSON("/User/GetUser/" + usreId, null, function (jsonObj) {
+                if (jsonObj != null) {
+                    $("#Name").val(jsonObj.FristName);
+                    $("#LoginName").val(jsonObj.LastName);
+                    $("#Email").val(jsonObj.Email);
+                    $("#Password").val(jsonObj.Password);
+                    var registerTime = ConvertJSONDateToJSDateObject(jsonObj.RegisterTime);
+                    $("#RegisterTime").val(registerTime);
+                    var lastLoginTime = ConvertJSONDateToJSDateObject(jsonObj.LastLoginTime);
+                    $("#LastLoginTime").val(lastLoginTime);
+                }
+            });
+        });
+
+        $(".selectDelete").on("click", function () {
+            var usreId = this.getAttribute("data-value");
+            $("#hdSelctedUserId").val(usreId);
+        });
+
+        $("#btnDelete").on("click", function () {
+            var userId = $("#hdSelctedUserId").val();
+            var actionStr = "/User/Delete/userId=" + userId;
+            $("#myform").attr({ "action": actionStr }).submit();
+        });
+    });
+
+    function myformListSubmit(index) {
+        var actionStr = "/User/Query?pageIndex=" + index;
+        $("#myListform").attr({ "action": actionStr }).submit();
+    }
+
+</script>

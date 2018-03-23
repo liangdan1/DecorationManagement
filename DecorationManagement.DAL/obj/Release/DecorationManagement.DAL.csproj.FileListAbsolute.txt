@@ -1,0 +1,15 @@
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\DecorationManagement.DAL.dll.config
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\DecorationManagement.DAL.dll
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\DecorationManagement.DAL.pdb
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\Castle.Core.dll
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\Castle.Windsor.dll
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\EntityFramework.dll
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\Castle.Core.xml
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\Castle.Windsor.xml
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\EntityFramework.xml
+D:\projects\DecorationManagement\DecorationManagement.DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\projects\DecorationManagement\DecorationManagement.DAL\obj\Release\DecorationManagement.DAL.csprojResolveAssemblyReference.cache
+D:\projects\DecorationManagement\DecorationManagement.DAL\obj\Release\DecorationManagement.DAL.csproj.CoreCompileInputs.cache
+D:\projects\DecorationManagement\DecorationManagement.DAL\obj\Release\DecorationManagement.DAL.dll
+D:\projects\DecorationManagement\DecorationManagement.DAL\obj\Release\DecorationManagement.DAL.pdb

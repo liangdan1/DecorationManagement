@@ -1,0 +1,542 @@
+﻿@model DecorationManagement.Models.UserViewModel
+
+<div class="main_con" style="transform: translateY(46px);">
+    <div class="main_banner">
+
+        <div class="pic_list swiper-container" id="bannerswiper" style="height:100%">
+            <div class="swiper-wrapper"
+                 style="height: 619px; width: 9515px; transform: translate3d(-1903px, 0px, 0px); transition-duration: 0.3s;">
+                <a href="#" class="swiper-slide swiper-lazy swiper-slide-duplicate"
+                   style="background:url(/Content/Images/banner_img.jpg)center center no-repeat; background-size:cover; width: 1920px; height: 619px;"
+                   target="_blank"></a>
+                <a href="#" class="swiper-slide swiper-lazy swiper-slide-visible swiper-slide-active"
+                   style="background: url(/Content/Images/banner_img2.jpg) center center no-repeat;  background-size:cover; width: 1920px; height: 619px;"
+                   target="_blank"></a>
+                <a href="#" class="swiper-slide swiper-lazy swiper-slide-visible swiper-slide-active"
+                   style="background: url(/Content/Images/banner_img3.jpg) center center no-repeat;  background-size:cover; width: 1920px; height: 619px;"
+                   target="_blank"></a>
+            </div>
+
+            <div class="swiper-pagination banner-swiper-pagination pagination">
+                <span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span>
+            </div>
+            <div id="banner-prev" class="swiper-button-prev swiper-button-white swiper-banner-arrow-link"
+                 style="left:20%"></div>
+            <div id="banner-next" class="swiper-button-next swiper-button-white swiper-banner-arrow-link"
+                 style="right:20%"></div>
+
+            @*<form action="" id="bannerForm">
+                <input type="hidden" name="orign" value="pc">
+                <div class="banner-search-box">
+                    <div class="banner-search-box-title"><span>免费获取</span><span>量房服务</span></div>
+                    <input class="banner-search-box-name" type="text" placeholder="您的称呼" name="name" id="banner_name"
+                           maxlength="10">
+                    <input class="banner-search-box-tel" type="text" placeholder="填写手机号码，严绿为您提供专属服务" name="phone"
+                           id="banner_phone" maxlength="20">
+                    <span class="banner-search-box-btn">预约咨询</span>
+                    <img class="banner-search-box-close-btn" src="~/Content/Images/×.png">
+                </div>
+            </form>*@
+        </div>
+    </div>
+
+    <div class="con_1">
+        <div class="container-fluid">
+
+            <div class="homeBrand active hover" data-offset="500">
+                <div class="homeTitle">
+                    <h3>
+                        <span>定制你梦想的家</span>
+                        <hr>
+                    </h3>
+                    <p>毋庸置疑的品牌实力 品质保证高端体验</p>
+                </div>
+                <!--极致人性-->
+                <div class="homeBrandBanner banner">
+                    <ul style="position: relative;">
+                        <li style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1; width: 802px; height: 400px;">
+                            <a href="#">
+                                <div class="homeBrandJzrx">硬装标配</div>
+                                <div class="homeBrandprice">
+                                    参考价&nbsp;￥<strong class="colorRed">218</strong><span style="font-size:16px;">元/m<sup>2</sup></span> <span class="xian_bottom1"></span>
+                                </div>
+
+                                <div class="left hover">
+                                    <p>
+                                        推荐指数<em class="colorRed"> ★★★★★</em>&nbsp;&nbsp;&nbsp;&nbsp; 推荐理由 <em class="colorRed">节省预算</em>
+                                    </p>
+                                    <span>同样的施工品质，超值价格；标配德国进口都芳漆、经久耐用的金刚玉地砖、烤漆室内门，大品牌，品质更佳；强化/实木复合地板自由选择；实用的厨房卫浴，厨柜柜体板通过日本JAS F★★★★标准认证。</span>
+                                    <strong class="Booking_btn_xq">了解详情</strong>
+                                </div>
+                                <div class="right">
+                                    <i><img src="~/Content/Images/brand_0_1.png"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 802px; height: 400px;">
+                            <a href="#">
+                                <div class="homeBrandJzrx">升级套餐</div>
+                                <div class="homeBrandprice">
+                                    参考价&nbsp;￥<strong class="colorRed">698</strong><span style="font-size:16px;">元/m<sup>2</sup></span><span class="xian_bottom1"></span>
+                                </div>
+                                <div class="left">
+                                    <p>
+                                        推荐指数<em class="colorRed"> ★★★★★</em>&nbsp;&nbsp;&nbsp;&nbsp; 推荐理由 <em class="colorRed">突破 生活品质更进一步</em>
+                                    </p>
+                                    <span>入选CCTV·国家品牌计划瓷砖品牌，采用优质矿物原料及意大利、西班牙进口环保釉料。“品质”可以具体到每一块砖的触感和每一方木的芳香。</span>
+                                    <strong class="Booking_btn_xq">了解详情</strong>
+                                </div>
+                                <div class="right">
+                                    <i><img src="~/Content/Images/brand_1_1.png"></i>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="homeBrandNumber Number">
+                    </div>
+                    <div class="homeBrandNext"><img alt="" src="~/Content/Images/brand_1.png"></div>
+
+                </div>
+                <!--全屋环保-->
+                <a href="#" class="homeBrandQwhb homeBrandBack">
+                    <img alt="" class="homeBrandQwhbBack" src="~/Content/Images/brand_2.jpg">
+                    <img alt="" class="homeBrandQwhbName" src="~/Content/Images/brand_2_1.png">
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!--报价计算器-->
+    <div class="con_2">
+        <div class="container-fluid">
+            <div class="homeBrand active hover" data-offset="500">
+                <div class="homeTitle1">
+                    <h3>
+                        <span>尊享服务</span>
+                        <hr />
+                    </h3>
+                    <p>200000家庭数据参考、一步解决预算烦恼。</p>
+                </div>
+            </div>
+
+            <div class="quotation_Con container-fluid">
+                <div class="quotation_left">
+                    <ul>
+                        <li class="quotation_left_modal" data-index="1" data-url="1.png">
+                            <div class="quotation_left_modal_ico">
+                                <img src="~/Content/Images/1.png" style="display:inline;">
+                                <img src="~/Content/Images/1_1.png" style="display:none;">
+                            </div>
+                            <p>免费报价</p>
+                        </li>
+                        <li class="quotation_left_modal quotation_left_modal_active" style="margin-right: 0px"
+                            data-index="2" data-url="2.png">
+                            <div class="quotation_left_modal_ico">
+                                <img src="~/Content/Images/2.png" style="display:none;">
+                                <img src="~/Content/Images/2_2.png" style="display:inline;">
+
+                            </div>
+                            <p>预算规划</p>
+                        </li>
+
+                        <li class="quotation_left_modal" data-index="3" data-url="3.png">
+                            <div class="quotation_left_modal_ico">
+                                <img src="~/Content/Images/4.png" style="display:inline;">
+                                <img src="~/Content/Images/4_4.png" style="display:none;">
+
+                            </div>
+                            <p>免费量房</p>
+                        </li>
+                        <li>
+                            <a class="quotation_left_last_a" href="#" title="点击获取案例">
+                                <div class="quotation_left_modal_ico_a"></div>
+                                <p>获取案例</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="quotation_right">
+                    <div id="quotation_right_slide_1" class="quotation_right_slide" style="display:none;">
+                        <form>
+                            <div class="quotation_right_modal">
+                                <label>我的姓名</label><input type="text" name="area" placeholder="请输入您的姓名"
+                                                          style="width:500px;" />
+                            </div>
+                            <div class="quotation_right_modal">
+                                <label>我的面积</label><input type="text" name="area" placeholder="请输入您的建筑面积"
+                                                          style="width:500px;" />
+                            </div>
+                            <div class="quotation_right_modal">
+                                <label>电话号码</label><input type="text" name="area" placeholder="请输入手机号码"
+                                                          style="width:500px;" />
+                            </div>
+                            <div class="quotation_right_modal">
+                                <a class="Booking_btn_rg" href="#">立即报价</a>
+                                <a class="Booking_btn_dj" href="#">点击咨询</a>
+                            </div>
+                            <img class="bj_ad_right" src="~/Content/Images/bj_ad_1.png" alt="" />
+                        </form>
+                    </div>
+
+                    <div id="quotation_right_slide_2" class="quotation_right_slide" style="">
+                        <form>
+                            <div class="quotation_right_modal">
+                                <label>我的面积</label><input type="text" name="area" placeholder="请输入室内面积/㎡"
+                                                          style="width:500px;" />
+                            </div>
+                            <div class="quotation_right_modal">
+                                <label>我的预算</label><input type="text" name="area" placeholder="请输入新家装修预算"
+                                                          style="width:500px;" />
+                            </div>
+                            <div class="quotation_right_modal">
+                                <label>电话号码</label><input type="text" name="area" placeholder="请输入手机号码"
+                                                          style="width:500px;" />
+                            </div>
+                            <div class="quotation_right_modal">
+                                <a class="Booking_btn_rg" href="#">人工预约</a>
+                                <a class="Booking_btn_dj" href="#">立即预约</a>
+                            </div>
+                            <img class="bj_ad_right" src="~/Content/Images/bj_ad_2.png" alt="" />
+                        </form>
+                    </div>
+
+                    <div id="quotation_right_slide_3" class="quotation_right_slide" style="display:none;">
+                        <form>
+                            <div class="quotation_right_modal">
+                                <label>我的姓名</label><input type="text" name="area" placeholder="请输入您的姓名"
+                                                          style="width:500px;" />
+                            </div>
+                            <div class="quotation_right_modal">
+                                <label>我的面积</label><input type="text" name="area" placeholder="请输入您的建筑面积"
+                                                          style="width:500px;" />
+                            </div>
+                            <div class="quotation_right_modal">
+                                <label>电话号码</label><input type="text" name="area" placeholder="请输入手机号码"
+                                                          style="width:500px;" />
+                            </div>
+                            <div class="quotation_right_modal">
+                                <a class="Booking_btn_rg" href="#">预约量房</a>
+                                <a class="Booking_btn_dj" href="#">点击咨询</a>
+                            </div>
+                            <img class="bj_ad_right" src="~/Content/Images/bj_ad_1.png" alt="" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--报价计算器完-->
+    <!--设计师个人作品展示-->
+    <div class="con_3">
+        <div class="homeBrand active hover" data-offset="500">
+            <div class="con_3_tit">
+                <div class="p_tit">
+                    <span class="span_lf">&nbsp;</span>
+                    <h3>精品案例</h3> <span class="span_rg">&nbsp;</span>
+                </div>
+                <p>严绿研发设计团队为您打造一个无限美好的创意家居</p>
+            </div>
+        </div>
+
+
+        <!--设计师列表-->
+        <div class="design_content talkto-designer-box">
+
+            <div class="talkto-design-content">
+                <div class="talkto-design-swiper swiper-container">
+                    <div class="swiper-wrapper"
+                         style="width: 9600px; height: 500px; transform: translate3d(-3600px, 0px, 0px); transition-duration: 0.3s;">
+                        <div class="swiper-slide" style="opacity: 1; width: 1200px; height: 500px;">
+                            <a class="design_designer" href="#">
+                                <img class="design_tuijian" src="~/Content/Images/design_tuijian.png" alt="" />
+                                <img class="design_designer_img" src="~/Content/Images/designer_1.jpg" alt="" />
+                                <div class="design_txt">一个愉悦的空间、一种尊贵的生活、一方独享的天地，都在这里寻求最合适的表达！</div>
+                            </a>
+                            <!--设计师资料简介-->
+                            <div class="design_prof">
+                                <div class="desi_p_top">
+                                    <span>个人资料</span>
+                                    <p>INFOMATION</p>
+                                </div>
+                                <div class="desi_p_bottom">
+                                    <a class="design_name" href="#">李萌</a>
+                                    <div class="design_level">首席设计师</div>
+                                    <div class="design_style">设计风格：北欧、现代简约、中式</div>
+                                    <div class="design_zuopin">
+                                        <span><img src="~/Content/Images/gl.png" alt="" /><em>6</em>年以上</span>
+                                        <span><img src="~/Content/Images/zp.png" alt="" /><em>208</em>套作品</span>
+                                    </div>
+                                    <div class="yuyue_designer"><a class="Booking_btn_dj" href="#">立即预约</a></div>
+                                </div>
+
+                            </div>
+
+                            <!--设计师作品展示-->
+                            <div class="designer_zp">
+                                <a class="de_zp_img de_zp_img_size1"  href="@Url.Action("Designer1Case1","DesignerCases")">
+                                    <img src="~/Content/Images/designer1_msfg_0103.jpg" alt="" />
+                                    <p>古典中式</p>
+                                </a>
+                                <a class="de_zp_img de_zp_img_size1"  href="@Url.Action("Designer1Case2","DesignerCases")">
+                                    <img src="~/Content/Images/designer1_zsfg_0103.jpg" alt="" />
+                                    <p>美式复古</p>
+                                </a>
+                            </div>
+                            <div class="designer_zp_right">
+                                <a class="de_zp_img de_zp_img_size2"  href="@Url.Action("Designer1Case3","DesignerCases")">
+                                    <img src="~/Content/Images/designer1_newzsfg_0103.jpg" alt="" />
+                                    <p>新中式</p>
+                                </a>
+                                <div class="desi_p_top">
+                                    <span>代表作品</span>
+                                    <p>DESIGN WORKS</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide" style="opacity: 1; width: 1200px; height: 500px;">
+                            <a class="design_designer" href="#">
+                                <img class="design_tuijian" src="~/Content/Images/design_tuijian.png" alt="" />
+                                <img class="design_designer_img" src="~/Content/Images/designer_2.jpg" alt="" />
+                                <div class="design_txt">艺术是生活的升华，设计是艺术的呈现！</div>
+                            </a>
+                            <!--设计师资料简介-->
+                            <div class="design_prof">
+                                <div class="desi_p_top">
+                                    <span>个人资料</span>
+                                    <p>INFOMATION</p>
+                                </div>
+                                <div class="desi_p_bottom">
+                                    <a class="design_name" href="#">王晨</a>
+                                    <div class="design_level">首席设计师</div>
+                                    <div class="design_style">设计风格：北欧、现代简约、中式</div>
+                                    <div class="design_zuopin">
+                                        <span><img src="~/Content/Images/gl.png" alt="" /><em>8</em>年以上</span>
+                                        <span><img src="~/Content/Images/zp.png" alt="" /><em>56</em>套作品</span>
+                                    </div>
+                                    <div class="yuyue_designer"><a class="Booking_btn_dj" href="#">立即预约</a></div>
+                                </div>
+                            </div>
+
+                            <!--设计师作品展示-->
+                            <div class="designer_zp">
+                                <a class="de_zp_img de_zp_img_size1" href="@Url.Action("Designer2Case1","DesignerCases")">
+                                    <img src="~/Content/Images/DesignerCase/designner02_Case1_1.jpg" alt="" />
+                                    <p>现代复古风格</p>
+                                </a>
+                                <a class="de_zp_img de_zp_img_size1" href="@Url.Action("Case1","Cases")">
+                                    <img src="~/Content/Images/Cases/Case_oushi-1/Case_oushi-1-1.jpg" alt="" />
+                                    <p>现代风格</p>
+                                </a>
+                            </div>
+                            <div class="designer_zp_right">
+                                <a class="de_zp_img de_zp_img_size2" href="@Url.Action("Designer2Case3","DesignerCases")">
+                                    <img src="~/Content/Images/designer2_newzsfg_0103.jpg" alt="" />
+                                    <p>新中式风格</p>
+                                </a>
+                                <div class="desi_p_top">
+                                    <span>代表作品</span>
+                                    <p>DESIGN WORKS</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide swiper-slide-visible swiper-slide-active"
+                             style="opacity: 1; width: 1200px; height: 500px;">
+                            <a class="design_designer" href="#">
+                                <img class="design_tuijian" src="~/Content/Images/design_tuijian.png" alt="" />
+                                <img class="design_designer_img" src="~/Content/Images/designer_3.jpg" alt="" />
+                                <div class="design_txt">让灵感自由释放，创造一个心灵渴望的空间。</div>
+                            </a>
+                            <!--设计师资料简介-->
+                            <div class="design_prof">
+                                <div class="desi_p_top">
+                                    <span>个人资料</span>
+                                    <p>INFOMATION</p>
+                                </div>
+                                <div class="desi_p_bottom">
+                                    <a class="design_name" href="#">谢敏</a>
+                                    <div class="design_level">首席设计师</div>
+                                    <div class="design_style">设计风格：北欧、现代简约、中式</div>
+                                    <div class="design_zuopin">
+                                        <span><img src="~/Content/Images/gl.png" alt="" /><em>5</em>年以上</span>
+                                        <span><img src="~/Content/Images/zp.png" alt="" /><em>86</em>套作品</span>
+                                    </div>
+                                    <div class="yuyue_designer"><a class="Booking_btn_dj" href="#">立即预约</a></div>
+                                </div>
+
+                            </div>
+
+                            <!--设计师作品展示-->
+                            <div class="designer_zp">
+                                <a class="de_zp_img de_zp_img_size1"  href="@Url.Action("Designer3Case1","DesignerCases")">
+                                    <img src="~/Content/Images/designer_3_beiofg_0104.jpg" alt="" />
+                                    <p>北欧风格</p>
+                                </a>
+                                <a class="de_zp_img de_zp_img_size1"  href="@Url.Action("Case2","Cases")">
+                                    <img src="~/Content/Images/Cases/Case_oushi-2/Case_oushi-2-2.jpg" alt="" />
+                                    <p>新中式风格</p>
+                                </a>
+                            </div>
+                            <div class="designer_zp_right">
+                                <a class="de_zp_img de_zp_img_size2"  href="@Url.Action("Designer3Case3","DesignerCases")">
+                                    <img src="~/Content/Images/designner01_xdfg01_07.jpg" alt="" />
+                                    <p>北欧风情</p>
+                                </a>
+                                <div class="desi_p_top">
+                                    <span>代表作品</span>
+                                    <p>DESIGN WORKS</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-pagination designer-swiper-pagination">
+                    <span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span>
+                </div>
+
+                <div class="designer-swiper-btn-left swiper-button-prev swiper-button-white"></div>
+                <div class="designer-swiper-btn-right swiper-button-next swiper-button-white"></div>
+            </div>
+        </div>
+
+    </div>
+    <!--设计师个人作品展示完-->
+    <!--点击更多部分-->
+    <div class="con_4">
+        <div class="container-fluid">
+            <div class="more_btn"><a class="more_anli_btn" href="#">查看更多案例</a></div>
+        </div>
+    </div>
+
+    <!--家装知识部分-->
+    <div class="con_5">
+        <div class="container-fluid">
+            <!--家装左边部分内容-->
+            <div class="zhishi_left">
+                <div class="zhishi_left_top">
+                    <span class="zxkt_tit">装修课堂</span>
+                    <p>新手变大神，家庭装修全攻略</p>
+                    <span class="xian_bottom">
+                    </span>
+                </div>
+                <div class="zhishi_left_bottom">
+                    <a href="#" title="点击立即领取现金券"><img src="~/Content/Images/jz_left_bottom_1.png" /></a>
+                    <div class="zhishi_left_bottom_float">
+                        <span>你装修，我送家具 </span>
+                        <P>精品家居现金折扣券</P>
+                    </div>
+                </div>
+            </div>
+
+            <!--家装中间部分内容-->
+            <div class="zhishi_middle">
+                <div class="tuijian_wz">
+                    <h1>磨刀不误砍柴工装修前准备要做好！</h1>
+                    <p><a href="@Url.Action("Article","Home")">对要装修的房子户型有最基本的了解， 朝向、间距、采光及各功能区的布局都要考虑到......</a></p>
+                </div>
+                <ul class="zhishi_list">
+                    <li><a href="@Url.Action("Article_1","Home")"><p>要想住得舒心，涂料这样选很重要！</p><em>2018-01-12</em></a></li>
+                        <li><a href="@Url.Action("Article_2","Home")"><p>冬季装修你应该知道的3件事！</p><em>2018-01-12</em></a></li>
+                        <li><a href="@Url.Action("Article_3","Home")"><p>水电包工多少钱一平方_如何避...</p><em>2018-01-12</em></a></li>
+                        <li><a href="@Url.Action("Article_4","Home")"><p>切记40条新房装修小细节 网友给出的...</p><em>2018-01-12</em></a></li>
+                        <li><a href="@Url.Action("Article_5","Home")"><p>【科普篇】装修先了解专业术语！</p><em>2018-01-12</em></a></li>
+                        <li><a href="@Url.Action("Article_6","Home")"><p>【菜鸟必修课】一分钟读懂装修！</p><em>2018-01-12</em></a></li>
+                        <li><a href="@Url.Action("Article_7","Home")"><p>【家装微课堂】怎样装出一个舒服的卧室！</p><em>2018-01-12</em></a></li>
+                        <li><a href="@Url.Action("Article_8","Home")"><p>毛坯房验房注意事项 如何验房才能...</p><em>2018-01-12</em></a></li>
+                </ul>
+            </div>
+
+            <!--家装右边部分内容-->
+            <div class="zhishi_right">
+                <a class="de_zp_img zhishi_img" href="@Url.Action("Case13","Cases")">
+                    <img src="~/Content/Images/zs_anli_001.jpg" alt="" />
+                    <p>北欧时尚小清新</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--建行免息贷-->
+    <div class="con_6">
+        <div class="container-fluid">
+            <form>
+                <div class="jianhang_form">
+                    <input type="text" placeholder="请输入您的姓名" />
+                    <input type="text" placeholder="您装修的楼盘" />
+                    <input type="text" placeholder="建筑面积" />
+                    <input type="text" placeholder="您的手机号码" />
+                    <a class="Booking_btn_rg" href="#">预约装修免息贷</a>
+                    <a class="Booking_btn_dj" href="#">咨询客服装修贷详情</a>
+                </div>
+            </form>
+
+            <div class="jianghang_right">
+                <div class="jianghang_txt"><img src="~/Content/Images/con_6_right_txt.png" /></div>
+                <a class="Booking_btn_red" href="#">建行免息贷</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--售后服务部分-->
+    <div class="con_7">
+        <div class="container-fluid">
+            <div class="homeBrand active hover" data-offset="500">
+                <div class="homeTitle">
+                    <h3>
+                        <span>服务保障</span>
+                        <hr />
+                    </h3>
+                    <p>一站式体验 标准化服务为您省心省力 品质保证高端体验</p>
+                </div>
+            </div>
+
+            <div class="service_con">
+                <div>
+                    <img src="~/Content/Images/service_1.png" alt="" />
+                    <P>在线预约</P>
+                    <span>专属客服一对一回访</span>
+                </div>
+
+                <div>
+                    <img src="~/Content/Images/service_2.png" alt="" />
+                    <P>免费量房</P>
+                    <span>免费上门量房</span>
+                </div>
+
+                <div>
+                    <img src="~/Content/Images/service_3.png" alt="" />
+                    <P>确定方案</P>
+                    <span>设计师免费设计方案</span>
+                </div>
+
+                <div>
+                    <img src="~/Content/Images/service_4.png" alt="" />
+                    <P>签订合同</P>
+                    <span>签订合同及交付装修款</span>
+                </div>
+                <div>
+                    <img src="~/Content/Images/service_5.png" alt="" />
+                    <P>装修施工</P>
+                    <span>严格按照标准施工交付</span>
+                </div>
+                <div>
+                    <img src="~/Content/Images/service_6.png" alt="" />
+                    <P>竣工验收</P>
+                    <span>验收通过全屋装修指标</span>
+                </div>
+                <div>
+                    <img src="~/Content/Images/service_7.png" />
+                    <P>装修保障</P>
+                    <span>享受国家标准质保</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,123 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="main_con" style="transform: translateY(46px);">
+    <div class="banner_con">
+        <img class="banner_img" src="~/Content/Images/content_img/banner_con_1.jpg" />
+        <div class="banner_txt"><img src="~/Content/Images/content_img/banner_con_1txt.png" /></div>
+    </div>
+
+    <!--路径导航-->
+    <!--路径导航-->
+    <div class="breadcrumb_con">
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li>@Html.ActionLink("网站首页", "Index", "Home")</li>
+                <li class="active">装修案例</li>
+            </ol>
+        </div>
+    </div>
+    <!--文章页面-->
+    <div class="article_con">
+        <div class="container-fluid">
+
+            @*<div class="article_left">
+            <article>
+                <h1>要想住得舒心，涂料这样选很重要！</h1>
+                <div class="p_center"><span>来源：严绿装饰有限公司</span><span>时间：2018年2月3日</span></div>
+                <p class="p_center"><img src="~/Content/Images/Articles_images/article_01_01.jpg" /></p>
+                <p class="p_center">揭秘涂料的环保技术 </p>
+
+                <p>1、VOC含量有利也有弊 </p>
+
+                <p>VOC是涂料质量的一个重要指标，它作为主要污染源的同时也与涂料成膜的物理性质直接相关，现在涂料市场整体也向着零VOC的方向发展。VOC是涂料中挥发性有机化合物的总称，主要包括甲醛、氨、乙二醇、酯类等物质，这些物质沸点较低，在装修后易逸散，长期吸入会危害人体健康。涂料中VOC的主要来源在成膜助剂和防冻剂等助剂中，单纯的降低VOC含量而不采用填补性物质的加入会导致涂料物理性质的降低。</p>
+                <p>2、净味漆不等于无污染 </p>
+                <p>
+                <p class="p_center"><img src="~/Content/Images/Articles_images/article_01_02.jpg" /></p>
+                传统涂料会利用香精来掩盖杂质带来的不良气味，而净味技术则以降低罐中和施工后的气味为目标，研制出的一种环保技术。净味的概念源于日本，其本意是指可以净化空气中的气味和毒性的功能性涂料，而在国内市场则多指气味相对较小的墙面涂料。产品净味的实现方式主要分加减法两种，加法是在涂料中加入其他物质使其与杂质味道中和，减法是指直接降低其中杂质含量。
+                </p>
+                <p>3、抗甲醛涂料火爆市场 </p>
+                <p class="p_center"><img src="~/Content/Images/Articles_images/article_01_03.jpg" /></p>
+                <p>
+                    市场需求变化让新型涂料不断问世，现在，不仅其自身VOC含量低，有的涂料还能够帮你分解室内的甲醛，净化家居空气。抗甲醛技术主要是通过物质的氧化还原反应对甲醛进行分解，应用在涂料中的“微孔净化技术”能够催化反应，帮助甲醛的吸收和降解。中消协过去对15个品牌的抗甲醛涂料的检测指出，不同品牌的涂料抗甲醛能力差异很大，市面上打着同样卖点的产品质量良莠不齐。
+                </p>
+                <p>4、竹炭吸附能力有限度 </p>
+                <p class="p_center"><img src="~/Content/Images/Articles_images/article_01_04.jpg" /></p>
+                <p>
+                    每1克竹炭经活化后表面积高达1000平米，商家也将竹炭元素融入涂料当中，利用其疏松多孔的结构能够帮助空气净化。竹炭吸附为物理过程竹炭素有“除湿之王”的称号，其材料细密多孔，表面积大，能够有效的调节室内湿度，帮助吸收室内有害大分子。竹炭吸附就如同海绵吸水，涂料中竹炭的元素是一定的，相对应对大分子的吸收能力也有限度，不能做到长期有效。
+                </p>
+                <strong>涂料应该怎么选 ？</strong>
+                <p>1、选购墙面漆性能很重要 </p>
+                <p class="p_center"><img src="~/Content/Images/Articles_images/article_01_05.jpg" /></p>
+                <p>遮盖力、附着力、粘度以及细度是墙面漆性能质量的四个主要考量标准，选购不能仅看环保型，材料质量也同样重要。遮盖力：指把色漆均匀涂布黑白格上，使其黑白格不再呈现的最小用漆量，用g/m2表示。重量越大遮盖力越弱，遮盖力越强表示单位面积的用漆量越少。 </p>
+                <p>附着力：表示涂膜与基层的粘合力，涂膜与被涂面之间通过物理化学作用结合的坚牢程度，被涂面可以是裸底材也可以是涂漆底材。附着力不强的墙面漆容易脱落，影响墙面美观。 </p>
+                <p>粘度：指涂料的粘稠度，可以使用油漆粘度测量仪器测量，粘度是涂料性能中的一个重要指标，对于涂料的存储稳定性，施工性能和成膜性能能有很大影响。涂料太稠就不容易涂刷，而太稀又容易流坠，因此涂料的粘度要控制在一定的范围内。 </p>
+                <p>细度：指涂料内颗粒的大小和分散的均匀程度。细度大小直接影响涂膜表面的平整性、光泽和透水性等。一般来说，涂料越细价格越贵。</p>
+                <p>2、购漆前先估算用量 </p>
+                <p class="p_center"><img src="~/Content/Images/Articles_images/article_01_06.jpg" /></p>
+                <p>
+                    许多消费者没有提前估算用漆量，怕少买了涂料，选购的时候总是多多益善。这样就可能造成了材料的浪费，增加了家装的费用，同时堆积过多的涂料对施工安全也造成一定的影响。因此建议消费者在施工之前，一定要看施工区域的面积，从而估算购买材料的多少。估算用漆量比较简单的方法是：涂一道所需的漆量(L)=(墙面面积x2.5)/每升漆可涂刷面积。
+
+                </p>
+                <p>3、施工准备过程需做好 </p>
+                <p class="p_center"><img src="~/Content/Images/Articles_images/article_01_07.jpg" /></p>
+                <p>
+                    施工过程中涂料滴落会弄脏家具，涂刷前在门、窗框和家具连接处粘贴分色纸保护，以免油漆的滴落难于清洁。
+                </p>
+                <p>4、墙面漆施工窍门 </p>
+                <p>工具的不同会带来效果分别，例如滚筒刷分为粗细两种，刷毛也有羊毛和化纤类的分别，不同刷子的涂刷效果差异很大。</p>
+
+            </article>
+            <div class="prenext">
+                <ul>
+                    <li>上一篇：<a href="">关于建筑装饰工程造价的控制措施</a> </li>
+                    <li>下一篇：<a href="">装修三大工程结束后的保洁注意事项</a> </li>
+                </ul>
+            </div>
+        </div>*@
+            @RenderBody();
+            <div class="article_right">
+                <div class="article_r">
+                    <span class="hot_icon"><img src="~/Content/Images/content_img/hot_icon.png" /></span>
+                    <form>
+                        <span>免费申请家装</span>
+                        <P>提交您的信息专业家装顾问1对1服务</P>
+                        <input type="text" name="area" placeholder="请输入您的称呼" style="width:255px;" />
+                        <input type="text" name="area" placeholder="请输入您的手机号码" style="width:255px;" />
+                        <input type="text" name="area" placeholder="请输入室内面积/㎡" style="width:255px;" />
+                    </form>
+                    <a class="Booking_btn_dj" href="">立即申请</a>
+                    <div class="xjq_txt">申请即送<em>1000元</em>现金券</div>
+                    <ul class="list js-appoint-user" id="textScroll">
+                        <li><a href="javascript:;">李** 138******3提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">1** 137******3提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">t** 136******0提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">7** 136******0提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">陈** 186******2提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">t** 151******9提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">t** 138******9提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">1** 138******3提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">于** 138******7提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">于** 138******7提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">t** 189******0提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">t** 138******8提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">t** 136******1提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">门** 150******1提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">王** 186******4提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">李** 130******5提交预约信息 <em>2018-3-8</em></a></li>
+                        <li><a href="javascript:;">刘** 138******1提交预约信息 <em>2018-3-8</em></a></li>
+                    </ul>
+
+                </div>
+
+                <div class="article_ad">
+                    <img src="~/Content/Images/content_img/right_ad.jpg" />
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

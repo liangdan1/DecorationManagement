@@ -1,0 +1,42 @@
+﻿@model DecorationManagement.Models.RegisterViewModel
+@{
+    Layout = null;
+}
+<div class="container divbolder">
+    <h2 class="subheader">创建用户</h2>
+    @using (Html.BeginForm("Register", "Login", FormMethod.Post, new { role = "form", id = "myform" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label for="name">姓名:</label>
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="name">登录名:</label>
+            @Html.TextBoxFor(m => m.LoginName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.LoginName, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="name">邮件地址:</label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="name">密码:</label>
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label for="name">确认密码:</label>
+            @Html.PasswordFor(m => m.RepartPassword, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.RepartPassword, "", new { @class = "text-danger" })
+        </div>
+        <div class="checkbox">
+            <a href="@Url.Action("Signin","Login")" class="text-success pull-right">返回登录</a>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">创建</button>
+        </div>
+    }
+</div>
